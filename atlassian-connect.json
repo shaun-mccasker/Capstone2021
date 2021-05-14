@@ -20,7 +20,7 @@
                 "name": {
                     "value": "Agile Roadmap"
                 },
-                "url": "/hello-world",
+                "url": "/agile-roadmap",
                 "conditions": [{
                     "condition": "user_is_logged_in"
                 }]
