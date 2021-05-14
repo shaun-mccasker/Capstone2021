@@ -5,7 +5,7 @@ export default function routes(app, addon) {
         res.redirect('/atlassian-connect.json');
     });
 
-    // This is an example route used by "generalPages" module (see atlassian-connect.json).
+    // // This is an example route used by "generalPages" module (see atlassian-connect.json).
     // Verify that the incoming request is authenticated with Atlassian Connect.
     app.get('/hello-world', addon.authenticate(), (req, res) => {
         // Rendering a template is easy; the render method takes two params: the name of the component or template file, and its props.
@@ -13,12 +13,10 @@ export default function routes(app, addon) {
         res.render(
           'hello-world.hbs', // change this to 'hello-world.jsx' to use the Atlaskit & React version
           {
-            title: 'Atlassian Connect'
+            title: 'Agile roadmap hdiushaiudhsauihdk'
             //, issueId: req.query['issueId']
             //, browserOnly: true // you can set this to disable server-side rendering for react views
           }
         );
-    });
-
-    // Add additional route handlers here...
+    })
 }

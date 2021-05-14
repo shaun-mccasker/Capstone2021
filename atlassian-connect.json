@@ -1,8 +1,8 @@
 {
-    "key": "my-app",
-    "name": "My app",
-    "description": "My very first app",
-    "baseUrl": "{{localBaseUrl}}",
+    "key": "agile-compass",
+    "name": "Agile roadmap",
+    "description": "Agile compass v4",
+    "baseUrl": "https://cbba3a20300d.ngrok.io",
     "authentication": {
         "type": "jwt"
     },
@@ -15,21 +15,10 @@
     "modules": {
         "generalPages": [
             {
-                "key": "hello-world-page-jira",
-                "location": "system.top.navigation.bar",
+                "key": "agile-roadmap",
+                "location": "jira.project.sidebar.navigation",
                 "name": {
-                    "value": "Hello World"
-                },
-                "url": "/hello-world",
-                "conditions": [{
-                    "condition": "user_is_logged_in"
-                }]
-            },
-            {
-                "key": "hello-world-page-confluence",
-                "location": "system.header/left",
-                "name": {
-                    "value": "Hello World"
+                    "value": "Agile Roadmap"
                 },
                 "url": "/hello-world",
                 "conditions": [{
