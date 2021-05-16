@@ -1,6 +1,28 @@
 import SectionMessage from '@atlaskit/section-message';
 import React from 'react';
 
+function API_test(){
+  const fetch = require('node-fetch');
+
+fetch('https://your-domain.atlassian.com/rest/api/3/project/search', {
+  method: 'GET',
+  headers: {
+    'Authorization': `Basic ${Buffer.from(
+      'email@example.com:<api_token>'
+    ).toString('base64')}`,
+    'Accept': 'application/json'
+  }
+})
+  .then(response => {
+    console.log(
+      `Response: ${response.status} ${response.statusText}`
+    );
+    return response.text();
+  })
+  .then(text => console.log(text))
+  .catch(err => console.error(err));
+}
+
 export default function HelloWorld() {
   const [excitementLevel, setExcitementLevel] = React.useState(0);
   return <SectionMessage
@@ -13,7 +35,11 @@ export default function HelloWorld() {
         },
         {
           key: '2',
-          onClick: () => setExcitementLevel(excitementLevel + 1),
+          onClick: function test(){
+            setExcitementLevel(excitementLevel + 1);
+            API_test();
+            console.log("text")
+          },
           text: 'Get excited!',
         }
       ]}

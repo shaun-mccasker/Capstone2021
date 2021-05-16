@@ -1,7 +1,9 @@
 # Atlassian Connect App using Express
 
-Congratulations!
-You've successfully created an Atlassian Connect App using the Express web application framework.
+atlassian-connect
+node_modules
+npm
+node-fetch
 
 ## What's next?
 
