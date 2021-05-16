@@ -2,7 +2,7 @@
     "key": "agile-compass",
     "name": "Agile roadmap",
     "description": "Agile compass v4",
-    "baseUrl": "https://64b1d8410b80.ngrok.io",
+    "baseUrl": "https://9873b40963e4.ngrok.io",
     "authentication": {
         "type": "jwt"
     },

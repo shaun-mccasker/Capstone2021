@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"nStu":[function(require,module,exports) {
+})({"agile-roadmap.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -135,19 +135,19 @@ function HelloWorld() {
   const [excitementLevel, setExcitementLevel] = _react.default.useState(0);
 
   return /*#__PURE__*/_react.default.createElement(_sectionMessage.default, {
-    title: `Hello, world${excitementLevel ? new Array(excitementLevel).fill('!').join('') : '.'}`,
+    title: "hello",
     actions: [{
       key: '1',
-      href: 'https://atlassian.design/components/',
-      text: 'Browse more components to add to your app'
-    }, {
-      key: '2',
-      onClick: () => setExcitementLevel(excitementLevel + 1),
-      text: 'Get excited!'
+      onClick: function test() {
+        setExcitementLevel(excitementLevel + 1);
+        API_test();
+        console.log("text");
+      },
+      text: 'test'
     }]
   }, /*#__PURE__*/_react.default.createElement("p", null, "Congratulations! You have successfully created an Atlassian Connect app using the ", /*#__PURE__*/_react.default.createElement("a", {
     href: 'https://bitbucket.org/atlassian/atlassian-connect-express'
   }, "atlassian-connect-express"), " client library."));
 }
-},{}]},{},["nStu"], null)
+},{}]},{},["agile-roadmap.jsx"], null)
 //# sourceMappingURL=/agile-roadmap.js.map

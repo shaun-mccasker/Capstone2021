@@ -11,7 +11,7 @@ export default function routes(app, addon) {
         // Rendering a template is easy; the render method takes two params: the name of the component or template file, and its props.
         // Handlebars and jsx are both supported, but please note that jsx changes require `npm run watch-jsx` in order to be picked up by the server.
         res.render(
-          'agile-roadmap.jsx', // change this to 'hello-world.jsx' to use the Atlaskit & React version
+          'agile-roadmap.hbs', // change this to 'hello-world.jsx' to use the Atlaskit & React version
           {
             title: 'Agile roadmap'
             //, issueId: req.query['issueId']
@@ -20,3 +20,4 @@ export default function routes(app, addon) {
         );
     })
 }
+

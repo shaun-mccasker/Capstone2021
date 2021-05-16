@@ -14,20 +14,27 @@
     <section class="aui-page-panel-item">
       <div class="aui-group">
         <div class="aui-item">
-          <p>
-            Congratulations!
-            You've successfully created an Atlassian Connect app using the
-            <a href="https://bitbucket.org/atlassian/atlassian-connect-express" target="_parent">atlassian-connect-express</a>
-            client library.
-          </p>
-          <p>
-            <a class="aui-button aui-button-primary" href="https://bitbucket.org/atlassian/atlassian-connect-express" target="_parent">
-              Get Started
-              <span class="aui-icon aui-icon-small aui-iconfont-devtools-arrow-right">Arrow right</span>
-            </a>
-          </p>
+            <button id="getUser">getuser</button>
+             <button id="getScrumboard">getscrumboard</button>
         </div>
       </div>
     </section>
   </div>
 </div>
+
+<script type="text/javascript">
+  document.getElementById("getUser").addEventListener("click", getUser)
+    function getUser(){
+      console.log("clicked")
+      AP.user.getCurrentUser(function(user) {
+      console.log("The Atlassian Account ID is", user.atlassianAccountId);
+    });
+    } 
+  document.getElementById("getScrumboard").addEventListener("click", getScrumBoardsId)
+  function getScrumBoardsId(){
+    console.log("cicked board");
+    AP.request('/rest/agile/1.0/board')
+      .then(data => alert(data.body))
+      .catch(e => alert(e.err));
+  } 
+</script>
