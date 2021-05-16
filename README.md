@@ -2,8 +2,7 @@
 
 atlassian-connect
 node_modules
-npm
-node-fetch
+
 
 ## What's next?
 
